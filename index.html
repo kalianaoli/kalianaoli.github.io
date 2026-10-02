@@ -252,6 +252,62 @@
     color: #625f57;
     line-height: 1.6;
 }
+        .skills {
+    padding: 100px 8%;
+    background: #fffdf8;
+}
+
+.skills-header {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.skills-header h2 {
+    font-size: 42px;
+    color: #3f4035;
+}
+
+.skills-header h2 span {
+    color: #687653;
+}
+
+.skills-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.skill-card {
+    padding: 30px;
+    background: #f6f1e8;
+    border-radius: 18px;
+    text-align: center;
+    border: 1px solid #e4d6d0;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    color: #3f4035;
+    margin-bottom: 12px;
+}
+
+.skill-card p {
+    color: #625f57;
+    line-height: 1.6;
+    font-size: 15px;
+}
         /* CELULAR */
         @media (max-width: 768px) {
 
@@ -317,6 +373,17 @@
 }
 
 .projects-grid {
+    grid-template-columns: 1fr;
+}
+            .skills {
+    padding: 80px 7%;
+}
+
+.skills-header h2 {
+    font-size: 34px;
+}
+
+.skills-grid {
     grid-template-columns: 1fr;
 }
         }
@@ -453,6 +520,63 @@
             <h3>Projeto em construção</h3>
             <p>
                 Em breve, um projeto de testes de API será apresentado aqui.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+    <section id="competencias" class="skills">
+
+    <div class="skills-header">
+
+        <p class="section-label">COMPETÊNCIAS</p>
+
+        <h2>
+            Ferramentas e áreas de <span>atuação</span>
+        </h2>
+
+    </div>
+
+    <div class="skills-grid">
+
+        <div class="skill-card">
+            <div class="skill-icon">🧪</div>
+            <h3>Testes de Software</h3>
+            <p>
+                Testes funcionais, casos de teste, evidências e análise de resultados.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">♿</div>
+            <h3>Acessibilidade</h3>
+            <p>
+                WCAG, testes de acessibilidade, teclado e análise da experiência do usuário.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">🌐</div>
+            <h3>Web & Mobile</h3>
+            <p>
+                Testes em aplicações web e mobile, fluxos funcionais e experiência do usuário.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">🔌</div>
+            <h3>Testes de API</h3>
+            <p>
+                APIs REST, requisições, validações e testes utilizando ferramentas como Postman.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">📋</div>
+            <h3>Metodologias</h3>
+            <p>
+                Scrum, Kanban, Jira e colaboração com equipes multidisciplinares.
             </p>
         </div>
 
