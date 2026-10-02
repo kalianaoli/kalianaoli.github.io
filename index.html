@@ -3,9 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Kaliana | Portfólio QA</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f6f1e8;
+            color: #3f4035;
+        }
+
+        /* PRIMEIRA TELA */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 8%;
+        }
+
+        .hero-content {
+            max-width: 1100px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hello {
+            color: #687653;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 58px;
+            line-height: 1.1;
+            color: #3f4035;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            color: #687653;
+        }
+
+        .subtitle {
+            font-size: 23px;
+            margin-bottom: 20px;
+            color: #75685c;
+        }
+
+        .description {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #625f57;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 25px;
+            background: #687653;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #526044;
+            transform: translateY(-2px);
+        }
+
+        /* ELEMENTO VISUAL */
+        .hero-decoration {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: #e4d6d0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-decoration::before {
+            content: "";
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            border: 2px solid #b9a48d;
+            position: absolute;
+        }
+
+        .leaf {
+            font-size: 90px;
+        }
+
+        /* CELULAR */
+        @media (max-width: 768px) {
+
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .subtitle {
+                font-size: 20px;
+            }
+
+            .hero-decoration {
+                width: 240px;
+                height: 240px;
+            }
+
+            .hero-decoration::before {
+                width: 180px;
+                height: 180px;
+            }
+
+            .leaf {
+                font-size: 70px;
+            }
+        }
+    </style>
 </head>
+
 <body>
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <p class="hello">Olá, eu sou</p>
+
+                <h1>
+                    Kaliana <span>Medeiros</span>
+                </h1>
+
+                <p class="subtitle">
+                    QA Tester | Acessibilidade Digital
+                </p>
+
+                <p class="description">
+                    Profissional de Qualidade de Software com experiência
+                    em testes funcionais, acessibilidade digital e melhoria
+                    da experiência do usuário.
+                </p>
+
+                <a href="#projetos" class="button">
+                    Conheça meu trabalho
+                </a>
+
+            </div>
+
+            <div class="hero-decoration">
+                <div class="leaf">🌿</div>
+            </div>
+
+        </div>
+
+    </section>
 
 </body>
 </html>
