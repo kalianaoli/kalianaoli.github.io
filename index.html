@@ -145,6 +145,51 @@
     font-size: 75px;
 }
 
+        .about {
+    min-height: 80vh;
+    padding: 100px 8%;
+    background: #fffdf8;
+    display: flex;
+    align-items: center;
+}
+
+.about-content {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.section-label {
+    color: #687653;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.about-title h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    color: #3f4035;
+}
+
+.about-title h2 span {
+    color: #687653;
+}
+
+.about-text {
+    color: #625f57;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+}
         /* CELULAR */
         @media (max-width: 768px) {
 
@@ -184,6 +229,22 @@
 
 .nav-links a {
     font-size: 12px;
+}
+            .about {
+    padding: 80px 7%;
+}
+
+.about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.about-title h2 {
+    font-size: 34px;
+}
+
+.about-text {
+    font-size: 16px;
 }
         }
     </style>
@@ -241,6 +302,44 @@
         </div>
 
     </section>
+    
+<section id="sobre" class="about">
 
+    <div class="about-content">
+
+        <div class="about-title">
+            <p class="section-label">SOBRE MIM</p>
+
+            <h2>
+                Qualidade, acessibilidade
+                <span>e experiência do usuário.</span>
+            </h2>
+        </div>
+
+        <div class="about-text">
+
+            <p>
+                Sou profissional de Qualidade de Software, com experiência
+                em testes funcionais, acessibilidade digital e análise da
+                experiência do usuário.
+            </p>
+
+            <p>
+                Minha atuação envolve testes em aplicações web e mobile,
+                identificação de problemas de usabilidade e acessibilidade,
+                além da colaboração com times para entregar produtos
+                mais seguros, acessíveis e fáceis de usar.
+            </p>
+
+            <p>
+                Tenho experiência com WCAG, testes funcionais, análise de
+                acessibilidade e ferramentas de apoio à qualidade de software.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 </body>
 </html>
