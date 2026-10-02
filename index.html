@@ -190,6 +190,68 @@
 .about-text p {
     margin-bottom: 18px;
 }
+        .projects {
+    padding: 100px 8%;
+    background: #f6f1e8;
+}
+
+.projects-header {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.projects-header h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #3f4035;
+}
+
+.projects-header h2 span {
+    color: #687653;
+}
+
+.projects-header > p:last-child {
+    color: #625f57;
+    line-height: 1.7;
+}
+
+.projects-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: #fffdf8;
+    padding: 30px;
+    border-radius: 18px;
+    border: 1px solid #e4d6d0;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card span {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #687653;
+}
+
+.project-card h3 {
+    margin: 15px 0;
+    color: #3f4035;
+}
+
+.project-card p {
+    color: #625f57;
+    line-height: 1.6;
+}
         /* CELULAR */
         @media (max-width: 768px) {
 
@@ -246,7 +308,19 @@
 .about-text {
     font-size: 16px;
 }
+            .projects {
+    padding: 80px 7%;
+}
+
+.projects-header h2 {
+    font-size: 34px;
+}
+
+.projects-grid {
+    grid-template-columns: 1fr;
+}
         }
+        
     </style>
 </head>
 
@@ -336,6 +410,50 @@
                 acessibilidade e ferramentas de apoio à qualidade de software.
             </p>
 
+        </div>
+
+    </div>
+
+</section>
+    <section id="projetos" class="projects">
+
+    <div class="projects-header">
+        <p class="section-label">MEUS PROJETOS</p>
+
+        <h2>
+            Projetos de <span>Qualidade de Software</span>
+        </h2>
+
+        <p>
+            Alguns projetos práticos desenvolvidos para demonstrar
+            minhas habilidades em QA, testes e acessibilidade digital.
+        </p>
+    </div>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <span>QA</span>
+            <h3>Projeto em construção</h3>
+            <p>
+                Em breve, um projeto prático de testes será apresentado aqui.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <span>ACESSIBILIDADE</span>
+            <h3>Projeto em construção</h3>
+            <p>
+                Em breve, um projeto relacionado à acessibilidade digital.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <span>API</span>
+            <h3>Projeto em construção</h3>
+            <p>
+                Em breve, um projeto de testes de API será apresentado aqui.
+            </p>
         </div>
 
     </div>
