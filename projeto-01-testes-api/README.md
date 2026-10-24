@@ -31,4 +31,25 @@ O JSONPlaceholder é uma API de simulação. As operações de criação, atuali
 
 ## Coleção Postman
 
-O arquivo JSON exportado do Postman será disponibilizado nesta pasta para consulta e execução dos testes.
+
+## Projeto 02 — Testes de API com Postman
+
+Projeto de testes funcionais de API REST utilizando Postman e JSONPlaceholder, com requisições HTTP e scripts automatizados para validar códigos de status, estrutura das respostas e dados retornados.
+
+**Cenários cobertos:**
+- GET — Listar usuários
+- GET — Consultar usuário inexistente
+- POST — Criar usuário
+- PATCH — Atualizar nome do usuário
+- PUT — Substituir dados do usuário
+- DELETE — Excluir usuário
+
+**Ferramentas:** Postman, JavaScript, HTTP e JSON.
+
+**Artefatos do projeto:**
+- [Coleção Postman (JSON)](./projeto-01-testes-api/)
+- [Relatório de testes](./projeto-01-testes-api/RELATORIO-DE-TESTES.md)
+
+*Nota: JSONPlaceholder simula operações de escrita; as alterações não são persistidas.*
+
+
