@@ -47,8 +47,8 @@ Projeto de testes funcionais de API REST utilizando Postman e JSONPlaceholder, c
 **Ferramentas:** Postman, JavaScript, HTTP e JSON.
 
 **Artefatos do projeto:**
-- [Coleção Postman (JSON)](./projeto-01-testes-api/)
-- [Relatório de testes](./projeto-01-testes-api/RELATORIO-DE-TESTES.md)
+- [Coleção Postman — Projeto 01 - Testes de API](https://github.com/kalianaoli/kalianaoli.github.io/blob/main/projeto-01-testes-api/Projeto%2001%20-%20Testes%20de%20API.postman_collection.json)
+- [Relatório de testes](https://github.com/kalianaoli/kalianaoli.github.io/blob/main/projeto-01-testes-api/RELATORIO-DE-TESTES.md)
 
 *Nota: JSONPlaceholder simula operações de escrita; as alterações não são persistidas.*
 
