@@ -1,96 +1,51 @@
-# Projeto 01 — Testes Funcionais Web | SauceDemo
+# Projeto 01 — Testes Funcionais | SauceDemo
 
-## Sobre o projeto
+## 📌 Sobre o projeto
 
-Projeto de testes funcionais realizado na aplicação web **SauceDemo**, com o objetivo de validar os principais fluxos de uma aplicação de e-commerce, desde a autenticação até a finalização de um pedido.
+Projeto de testes funcionais manuais realizado na aplicação de demonstração [SauceDemo](https://www.saucedemo.com/), com o objetivo de validar funcionalidades essenciais de um e-commerce e documentar os resultados da execução dos testes.
 
-Os testes foram executados manualmente, com documentação dos cenários, resultados obtidos e status de execução.
+## 🎯 Objetivo
 
-## Objetivos
+Praticar técnicas de teste de software, elaboração de casos de teste, execução manual, validação de resultados esperados e documentação da qualidade da aplicação.
 
-* Validar o funcionamento dos principais recursos da aplicação.
-* Identificar comportamentos inesperados durante a execução dos testes.
-* Validar regras de negócio e fluxos de navegação.
-* Documentar casos de teste e resultados.
-* Garantir a integridade do fluxo de compra.
+## 🧪 Escopo dos testes
 
-## Escopo dos testes
+Os testes contemplaram os seguintes módulos:
 
-Foram testados os seguintes módulos:
+- **Login:** validação do acesso à aplicação.
+- **Produtos:** visualização e ordenação dos produtos.
+- **Carrinho:** inclusão e remoção de produtos.
+- **Checkout:** preenchimento dos dados e finalização da compra.
+- **Logout:** encerramento da sessão.
 
-* Login e autenticação
-* Catálogo de produtos
-* Ordenação de produtos
-* Detalhes dos produtos
-* Carrinho de compras
-* Checkout
-* Validação de campos obrigatórios
-* Resumo do pedido
-* Finalização da compra
-* Cancelamento do checkout
-* Logout
-* Controle de sessão
+## 📊 Resultados da execução
 
-## Resultados
+- **Total de casos de teste:** 37
+- **Aprovados:** 37
+- **Reprovados:** 0
+- **Taxa de aprovação:** 100%
 
-**37 casos de teste executados**
+Todos os 37 casos de teste foram registrados como aprovados durante a execução.
 
-**37 casos aprovados**
+## 📁 Artefatos do projeto
 
-**0 casos reprovados**
+- [Planilha de casos de teste](./casos-de-teste/casos-de-teste-saucedemo.xlsx) — cenários, pré-condições, passos de execução, resultados esperados e resultados obtidos.
 
-**Taxa de aprovação: 100%**
+## 🛠️ Ferramentas e conhecimentos aplicados
 
-## Tipos de validação
+- Testes funcionais manuais
+- Elaboração e execução de casos de teste
+- Validação de resultados esperados
+- Documentação de testes
+- Microsoft Excel
+- Git e GitHub
 
-Durante a execução foram realizadas validações de:
+## 🚀 Aprendizados
 
-* Fluxos positivos
-* Fluxos negativos
-* Validação de campos obrigatórios
-* Mensagens de erro
-* Navegação entre páginas
-* Persistência dos dados do carrinho
-* Cálculo e apresentação dos valores do pedido
-* Controle de sessão após logout
-
-## Técnicas e ferramentas
-
-* Testes funcionais manuais
-* Elaboração de casos de teste
-* Testes positivos e negativos
-* Validação de regras de negócio
-* Análise de resultados
-* Documentação de evidências
-* GitHub
-* SauceDemo
-
-## 📁 Estrutura do projeto
-
-```text
-projeto-01-saucedemo/
-├── README.md
-├── casos-de-teste/
-│   └── casos-de-teste-saucedemo.xlsx
-├── evidencias/
-│   ├── login/
-│   ├── produtos/
-│   ├── carrinho/
-│   └── checkout/
-└── bugs/
-```
-
-## 📋 Documentação
-
-Os casos de teste completos estão disponíveis na planilha:
-
-**[Casos de Teste — SauceDemo](./casos-de-teste/casos%20de%20testes.xlsx)**
-
-## Próximas etapas
-
-Como evolução deste projeto, alguns dos cenários funcionais serão automatizados utilizando **Playwright**, permitindo demonstrar a integração entre testes manuais e automação de testes.
+Este projeto contribuiu para o desenvolvimento de habilidades práticas em Quality Assurance (QA), organização de evidências de teste, análise de funcionalidades e documentação dos resultados de execução.
 
 ---
 
-**Projeto desenvolvido para demonstração prática de conhecimentos em Quality Assurance (QA).**
+*Projeto desenvolvido para fins de estudo e composição de portfólio na área de Qualidade de Software (QA).* 
+
 
