@@ -1,0 +1,229 @@
+{
+  "info": {
+    "_postman_id": "17723a7b-1864-4659-9ba0-3f1779124b7d",
+    "name": "Projeto 01 - Testes de API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53536477",
+    "_collection_link": "https://go.postman.co/collection/53536477-17723a7b-1864-4659-9ba0-3f1779124b7d?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GET - Listar usuários",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "\npm.test(\"Status HTTP deve ser 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Resposta deve conter 10 usuários\", function () {\n    const usuarios = pm.response.json();\n\n    pm.expect(usuarios).to.be.an(\"array\");\n    pm.expect(usuarios).to.have.lengthOf(10);\n});\n\npm.test(\"Cada usuário deve ter id, nome e email\", function () {\n    const usuarios = pm.response.json();\n\n    usuarios.forEach(function (usuario) {\n        pm.expect(usuario).to.have.property(\"id\");\n        pm.expect(usuario).to.have.property(\"name\");\n        pm.expect(usuario).to.have.property(\"email\");\n    });\n});\n"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "GET - Consultar usuário inexistente",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "\r\npm.test(\"Usuário inexistente deve retornar 404\", function () {\r\n    pm.response.to.have.status(404);\r\n});\r\n"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/999",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "999"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST - Criar usuário",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "\r\npm.test(\"Criação deve retornar status 201\", function () {\r\n    pm.response.to.have.status(201);\r\n});\r\n\r\npm.test(\"Resposta deve ser um objeto JSON\", function () {\r\n    const usuario = pm.response.json();\r\n\r\n    pm.expect(usuario).to.be.an(\"object\");\r\n    pm.expect(usuario).to.have.property(\"id\");\r\n});\r\n\r\npm.test(\"Resposta deve conter os dados enviados\", function () {\r\n    const usuario = pm.response.json();\r\n\r\n    pm.expect(usuario.name).to.eql(\"Kaliana QA\");\r\n    pm.expect(usuario.username).to.eql(\"kaliana_qa\");\r\n    pm.expect(usuario.email).to.eql(\"kaliana.qa@example.com\");\r\n});\r\n"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n{\r\n  \"name\": \"Kaliana QA\",\r\n  \"username\": \"kaliana_qa\",\r\n  \"email\": \"kaliana.qa@example.com\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PATCH - Atualizar nome do usuário",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "\r\npm.test(\"Atualização deve retornar status 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test(\"Resposta deve conter o nome atualizado\", function () {\r\n    const usuario = pm.response.json();\r\n\r\n    pm.expect(usuario.name).to.eql(\"Kaliana QA Atualizada\");\r\n});\r\n\r\npm.test(\"Resposta deve manter o ID do usuário\", function () {\r\n    const usuario = pm.response.json();\r\n\r\n    pm.expect(usuario.id).to.eql(1);\r\n});\r\n"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n{\r\n  \"name\": \"Kaliana QA Atualizada\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/1",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT - Substituir dados do usuário",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "\r\npm.test(\"PUT deve retornar status 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test(\"Resposta deve conter o nome enviado\", function () {\r\n    const usuario = pm.response.json();\r\n\r\n    pm.expect(usuario.name).to.eql(\"Kaliana QA PUT\");\r\n});\r\n\r\npm.test(\"Resposta deve conter username e email enviados\", function () {\r\n    const usuario = pm.response.json();\r\n\r\n    pm.expect(usuario.username).to.eql(\"kaliana_put\");\r\n    pm.expect(usuario.email).to.eql(\"kaliana.put@example.com\");\r\n});\r\n"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n{\r\n  \"name\": \"Kaliana QA PUT\",\r\n  \"username\": \"kaliana_put\",\r\n  \"email\": \"kaliana.put@example.com\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/1",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE - Excluir usuário",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "\r\npm.test(\"DELETE deve retornar status 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test(\"Resposta deve ser um objeto JSON\", function () {\r\n    const resposta = pm.response.json();\r\n\r\n    pm.expect(resposta).to.be.an(\"object\");\r\n});\r\n\r\npm.test(\"Resposta não deve indicar erro HTTP\", function () {\r\n    pm.expect(pm.response.code).to.be.within(200, 299);\r\n});\r\n"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/1",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
